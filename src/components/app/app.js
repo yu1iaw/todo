@@ -21,9 +21,14 @@ const App = () => {
     const [data, setData] = useState(initData);
     const [row, setRow] = useState('');
     const [filter, setFilter] = useState('all');
+    const [id, setId] = useState('7');
 
     useEffect(() => {
         sessionStorage.setItem('tasks', JSON.stringify(data));
+        fetch('http://www.randomnumberapi.com/api/v1.0/randomstring?min=5&max=10&count=1&all=true')
+            .then(res => res.json())
+            .then(data => setId(data))
+
     }, [data])
 
 
@@ -32,7 +37,7 @@ const App = () => {
         setData(newArr);
     }
 
-    const addTask = (task, id) => {
+    const addTask = (task) => {
         const newTask = {
             task,
             asap: false,

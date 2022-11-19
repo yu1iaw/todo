@@ -6,17 +6,14 @@
 
 .list-group-item :focus {
     outline: 2px dotted seashell;
-    background-color: aliceblue;
 }
 
 .list-group-item :focus:not(:focus-visible) {
     outline: none;
-    background-color: transparent;
 }
 
 .list-group-item :focus-visible {
     outline: 2px dotted floralwhite;
-    background-color: transparent;
 }
 
 .list-group-item:last-child {

@@ -17,6 +17,7 @@ h3 {
 
 @media (min-width: 360px) and (max-width: 500px) {
     .app-add-form {
+        margin-top: 20px;
         padding: 15px;
     }
 

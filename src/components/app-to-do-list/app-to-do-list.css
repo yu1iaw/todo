@@ -3,3 +3,9 @@
     border-radius: 5px;
     color: #fff;
 }
+
+@media (min-width: 360px) and (max-width: 500px) {
+    .app-list {
+        margin-top: 20px;
+    }
+}

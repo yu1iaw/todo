@@ -5,7 +5,7 @@
 }
 
 .list-group-item :focus {
-    outline: 2px dotted seashell;
+    outline: 2px dotted transparent;
 }
 
 .list-group-item :focus:not(:focus-visible) {

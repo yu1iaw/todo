@@ -14,10 +14,9 @@ class AddTask extends React.Component {
 	
 
 	onValueChange = (e) => {
-		if (e.target.value === '') this.myRef.current.style.backgroundColor = '';
-		else if (e.target.value.length < 5 || e.target.value.length > 50 || (window.screen.width < 500 && e.target.value.length > 33)) {
+		this.myRef.current.classList.remove('animate__animated', 'animate__shakeX');
+		if (e.target.value.length > 50 || (window.screen.width < 500 && e.target.value.length > 33)) {
 			this.myRef.current.style.backgroundColor = '#ff6666';
-			this.myRef.current.classList.remove('animate__animated', 'animate__shakeX');
 		} else {
 			this.myRef.current.style.backgroundColor = '';
 		}
@@ -29,7 +28,7 @@ class AddTask extends React.Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		if (this.state.task.length < 5 || this.state.task.length > 50 || (window.screen.width < 500 && this.state.task.length > 33)) {
+		if (!/\S/g.test(this.state.task) || this.state.task.length < 5 || this.state.task.length > 50 || (window.screen.width < 500 && this.state.task.length > 33)) {
 			this.myRef.current.classList.add('animate__animated', 'animate__shakeX');
 			return;
 		} else {

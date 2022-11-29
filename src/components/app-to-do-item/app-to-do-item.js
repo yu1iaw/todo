@@ -4,7 +4,7 @@ import "./app-to-do-item.css";
 
 const ToDoItem = (props) => {
 	const { asap, done } = props;
-	let className = "list-group-item d-flex justify-content-between";
+	let className = "list-group-item d-flex justify-content-between shadow";
 	if (asap) {
 		className += " asap";
 	}

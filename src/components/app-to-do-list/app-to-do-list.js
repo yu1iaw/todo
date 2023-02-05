@@ -26,7 +26,7 @@ const ToDoList = ({data, onDelete, onToggleAsap, onToggleDone}) => {
 
     return (
         <ul className="app-list list-group">
-            <TransitionGroup>
+            <TransitionGroup component={null}>
                 {elements}
             </TransitionGroup> 
         </ul>

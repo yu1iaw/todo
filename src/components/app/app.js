@@ -25,9 +25,10 @@ const App = () => {
 
     useEffect(() => {
         sessionStorage.setItem('tasks', JSON.stringify(data));
-        fetch('https://www.randomnumberapi.com/api/v1.0/randomstring?min=5&max=10&count=1&all=true')
-            .then(res => res.json())
-            .then(data => setId(data))
+        // fetch('https://www.randomnumberapi.com/api/v1.0/randomstring?min=5&max=10&count=1&all=true')
+        //     .then(res => res.json())
+        //     .then(data => setId(data))
+        setId(Date.now());
 
     }, [data])
 
